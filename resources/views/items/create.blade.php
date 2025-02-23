@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Item</title> <!-- Menambahkan judul Add Item -->
+    <title>Add Item</title> <!-- Menambahkan judul Add Item -->  <!-- menambahkan command untuk memancing pengeditan letak folder -->
 </head>
 <body>
     <h1>Add Item</h1> <!-- Menambahkan heading utama Add Item -->
