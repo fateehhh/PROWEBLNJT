@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\ItemController; // Memanggil class ItemController
-use Illuminate\Support\Facades\Route; // Memanggil class Route
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +13,45 @@ use Illuminate\Support\Facades\Route; // Memanggil class Route
 |
 */
 
-Route::get('/', function () { // Mendefinisikan route untuk halaman utama
-    return view('welcome'); // Mengembalikan view 'welcome'
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::resource('items', ItemController::class); // Mendefinisikan route untuk resource 'items'
+// Route::get('/hello1', function () {
+//     return 'Hello World';
+// });
+
+Route::get('/hello', function () {
+    return view('hello');
+});
+
+Route::get('/world', function () {
+    return 'World';
+});
+
+Route::get('/welcome', function () {
+    return 'Selamat Datang';
+});
+
+Route::get('/about', function () {
+    return 'Nama: M. Fatih Al Ghifary 
+    NIM: 2341720194';
+});
+
+Route::get('/user/{name}', function ($name) {
+    return 'M. Fatih Al Ghifary ' . $name;
+});
+
+Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) { // Mendefinisikan rute GET untuk halaman artikel
+    return 'Pos ke-' . $postId . " Komentar ke-: " . $commentId;
+});
+
+Route::get('/articles/{id}', function ($id) { // Mendefinisikan rute GET untuk halaman artikel
+    return "Halaman Artikel dengan ID $id";
+});
+
+Route::get('/user/{name?}', function ($name = 'John') { // Mendefinisikan rute GET untuk halaman user
+    return 'Nama saya ' . $name;
+});
+
+
