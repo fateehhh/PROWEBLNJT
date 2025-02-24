@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ItemController; // Memanggil class ItemController
+use Illuminate\Support\Facades\Route; // Memanggil class Route
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function () { // Mendefinisikan route untuk halaman utama
+    return view('welcome'); // Mengembalikan view 'welcome'
 });
+
+Route::resource('items', ItemController::class); // Mendefinisikan route untuk resource 'items'
