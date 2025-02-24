@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,13 +16,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/hello1', function () {
-//     return 'Hello World';
+// Route::get('/hello', function () {
+//     return view('hello');
 // });
-
-Route::get('/hello', function () {
-    return view('hello');
-});
 
 Route::get('/world', function () {
     return 'World';
@@ -38,20 +33,19 @@ Route::get('/about', function () {
     NIM: 2341720194';
 });
 
-Route::get('/user/{name}', function ($name) {
-    return 'M. Fatih Al Ghifary ' . $name;
-});
+// Route::get('/user/{name}', function ($name) {
+//     return 'Nama saya ' . $name;
+// });
 
-Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) { // Mendefinisikan rute GET untuk halaman artikel
+Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
     return 'Pos ke-' . $postId . " Komentar ke-: " . $commentId;
 });
 
-Route::get('/articles/{id}', function ($id) { // Mendefinisikan rute GET untuk halaman artikel
+Route::get('/articles/{id}', function ($id) { 
     return "Halaman Artikel dengan ID $id";
 });
 
-Route::get('/user/{name?}', function ($name = 'John') { // Mendefinisikan rute GET untuk halaman user
+Route::get('/user/{name?}', function ($name = 'John') { 
     return 'Nama saya ' . $name;
 });
-
 
