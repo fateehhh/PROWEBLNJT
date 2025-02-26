@@ -7,7 +7,7 @@ Repository ini berisi tugas-tugas yang diberikan dalam mata kuliah **Pemrograman
 
 | Minggu | Nama Tugas | Link |
 |--------|-----------|------|
-| 1 | Instalasi Laravel & pembuatan project pertama | [Minggu 1]((https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%201)) |
+| 1 | Instalasi Laravel & pembuatan project pertama | [Minggu 1](https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%201) |
 | 2 | - CRUD Sederhana <br> - PWL 2025 <br> - POS | [Minggu 2](https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%202) |
 | 3 | Migration, Seeder, DB Façade, Query Builder, dan Eloquent ORM | [Minggu 3](./Minggu3/) |
 | 4 | - | [Minggu 4](./Minggu4/) |
