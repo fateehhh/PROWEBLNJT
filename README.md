@@ -1,7 +1,5 @@
 
-|# Pemrograman Web Lanjut - Semester 4   |
-|2341720194/M. Fatih Al Ghifary/16/TI-2A |
-|----------------------------------------|
+# Pemrograman Web Lanjut - Semester 4
 
 Repository ini berisi tugas-tugas yang diberikan dalam mata kuliah **Pemrograman Web Lanjut** pada semester 4. Setiap tugas dikelompokkan berdasarkan minggu pengerjaannya.
 
@@ -19,4 +17,11 @@ Repository ini berisi tugas-tugas yang diberikan dalam mata kuliah **Pemrograman
 | 8 | - | [Minggu 8](./Minggu8/) |
 | 9 | - | [Minggu 9](./Minggu9/) |
 | 10 | - | [Minggu 10](./Minggu10/) |
+
+#Kontributor
+
+Nama: M. Fatih Al Ghifary
+NIM: 2341720194
+Kelas: TI-2
+AMata Kuliah: Pemrograman Web Lanjut
 
