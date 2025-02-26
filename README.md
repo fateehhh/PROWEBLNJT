@@ -18,10 +18,10 @@ Repository ini berisi tugas-tugas yang diberikan dalam mata kuliah **Pemrograman
 | 9 | - | [Minggu 9](./Minggu9/) |
 | 10 | - | [Minggu 10](./Minggu10/) |
 
-#Kontributor
+## Kontributor
 
-Nama: M. Fatih Al Ghifary
-NIM: 2341720194
-Kelas: TI-2
-AMata Kuliah: Pemrograman Web Lanjut
+Nama: M. Fatih Al Ghifary <br>
+NIM: 2341720194 <br>
+Kelas: TI-2 <br>
+AMata Kuliah: Pemrograman Web Lanjut <br>
 
