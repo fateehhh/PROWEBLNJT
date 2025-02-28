@@ -9,8 +9,8 @@ return new class extends Migration {
     {
         Schema::create('m_kategori', function (Blueprint $table) {
             $table->id('id_kategori');
-            $table->string('nama_kategori', 10);
-            $table->text('deskripsi')->nullable();
+            $table->string('kategori_kode', 10)->unique();
+            $table->String('kategori_nama', 100);
             $table->timestamps();
         });
     }
