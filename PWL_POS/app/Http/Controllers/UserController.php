@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         // J4_Praktikum 1
         // $data = [
         //     'level_id' => 2,
@@ -38,7 +39,7 @@ class UserController extends Controller
         //     abort(404);
         // });
         // return view('user',['data' => $user]);
-        
+
         // Praktikum 2.1 (no-11)
         // (tidak menggunakan yang atas karena saya sudah memiliki datanya akibat auto incremet saat percobaan)
         // $user = UserModel::findOr(20, ['username','nama'], function(){
@@ -52,12 +53,17 @@ class UserController extends Controller
         // });
         // return view('user',['data' => $user]);
 
-         // Praktikum 2.2 (no-2)
+        // Praktikum 2.2 (no-2)
         // $user = UserModel::findOrFail(1);
         // return view('user',['data' => $user]);
-        
+
         // Praktikum 2.2 (no-4)
-        $user = UserModel::where('username','manager9')->firstOrFail();
-        return view('user',['data' => $user]);
+        // $user = UserModel::where('username','manager9')->firstOrFail();
+        // return view('user',['data' => $user]);
+
+        // Praktikum 2.3 (no-2)
+        $user = UserModel::where('level_id', 2)->count();
+        // dd($user);
+        return view('user', ['data' => $user]);
     }
 }
