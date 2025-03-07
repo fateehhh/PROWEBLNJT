@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-# JOBSHEET 3
-## MIGRATION, SEEDER, DB FAÇADE, QUERY BUILDER, dan ELOQUENT ORM
-=======
+
 # JOBSHEET 3 | MIGRATION, SEEDER, DB FAÇADE, QUERY BUILDER, dan ELOQUENT ORM
->>>>>>> 88218ec6c26b25fa1e87046e966fb7418f2d082a
 2341720194/M. Fatih Al Ghifary/16/TI-2A
 
 ## Pertanyaan dan Jawaban
@@ -82,8 +78,4 @@ jawab: Tujuan penulisan protected $table = 'm_user'; dan protected $primaryKey =
 - **DB Facade (Raw Query)**: Sebenarnya enak menggunakan DB Facade untuk query yang kompleks, karena lebih flexibel dan menggunakan Query seperti pada umumnya. Namun, Kode sulit terbaca karena panjang, sehingga harus teliti dalam memasukkan Query. DB Facade juga tidak aman jika tidak menggunakan parameter binding, raw SQL rentan terhadap SQL Injection
 - **Query Builder**: Jelas lebih aman ketimbang DB Facade karena sudah menggunakan parameter binding, sehingga lebih melindungi dari SQL Injection. Kodenya lebih mudah dibaca karena terstruktur dan simple, serta Bisa digunakan untuk berbagai jenis database tanpa mengubah kode. Jika dibandingkan dengan Eloquent ORM, Query Builder masih membutuhkan lebih banyak kode
 - **Eloquent ORM (Object-Relational Mapping)**: Paling mudah dan singkat dari lainnya. Memanfaatkan fitur Model untuk mengelola data dengan lebih baik. Mendukung relationship antar tabel secara otomatis. Lebih mudah dibaca dan mempermudah maintanance.
-<<<<<<< HEAD
-- **Jadi mana yang lebih mudah?**Eloquent ORM paling mudah karena sintaksnya mirip dengan cara kita bekerja dengan objek dalam PHP.
-=======
-- **Jadi mana yang lebih mudah?** Eloquent ORM paling mudah karena sintaksnya mirip dengan cara kita bekerja dengan objek dalam PHP.
->>>>>>> 88218ec6c26b25fa1e87046e966fb7418f2d082a
+
