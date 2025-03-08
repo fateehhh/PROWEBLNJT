@@ -168,12 +168,20 @@ class UserController extends Controller
 
         //Praktikum 2.6 CRUD
         //no-2
-        $user = UserModel::all();
-        return view('user', ['data' => $user]);
+        // $user = UserModel::all();
+        // return view('user', ['data' => $user]);
+
+        //Praktikum 2.7 (no-3)
+        // $user = UserModel::with('level')->get();
+        // dd($user);
+
+        //Praktikum 2.7 (no-6)
+        $user = UserModel::with('level')->get();
+        return view('user',['data' => $user]);
+
     }
 
     //Praktikum 2.6 CRUD
-    //no-7
     public function tambah()
     {
         return view('user_tambah');
@@ -215,7 +223,7 @@ class UserController extends Controller
     {
         $user = UserModel::find($id);
         $user->delete();
-        
+
         return redirect('/user');
     }
 }
