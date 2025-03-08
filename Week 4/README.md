@@ -10,6 +10,3 @@
 
 ## Link Laporan PDF Jobsheet 4
 [Laporan PDF](https://github.com/fateehhh/PROWEBLNJT/blob/main/Week%204/TI-2A_16_M.%20Fatih%20Al%20Ghifary_Week%204.pdf)
-
-
-
