@@ -1,9 +1,10 @@
-<p style="display: flex; align-items: center;">
-  <img src="image/logopoltek.png" width="100" style="margin-right: 15px;">
-  <span>
-    <strong style="font-size: 20px;">JOBSHEET 04 - MODEL dan ELOQUENT ORM</strong><br>
-    2341720194 / M. Fatih Al Ghifary / 16 / TI-2A
-  </span>
+<p align="center">
+  <img src="image/logopoltek.png" width="100">
+</p>
+
+<p align="center">
+  <strong>JOBSHEET 04 - MODEL dan ELOQUENT ORM</strong><br>
+  2341720194 / M. Fatih Al Ghifary / 16 / TI-2A
 </p>
 
 ---
