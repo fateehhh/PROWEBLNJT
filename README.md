@@ -11,8 +11,8 @@ ___
 | 1 | Instalasi Laravel & pembuatan project pertama | [Minggu 1](https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%201) |
 | 2 | - CRUD Sederhana <br> - PWL 2025 <br> - POS | [Minggu 2](https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%202) |
 | 3 | Migration, Seeder, DB Façade, Query Builder, dan Eloquent ORM | [Minggu 3](https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%203) |
-| 4 | - | [Minggu 4](./Minggu4/) |
-| 5 | - | [Minggu 5](./Minggu5/) |
+| 4 | MODEL dan ELOQUENT ORM | [Minggu 4](https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%204) |
+| 5 | Blade View, Web Templating(AdminLTE), Datatables | [Minggu 5](https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%205) |
 | 6 | - | [Minggu 6](./Minggu6/) |
 | 7 | - | [Minggu 7](./Minggu7/) |
 | 8 | - | [Minggu 8](./Minggu8/) |
