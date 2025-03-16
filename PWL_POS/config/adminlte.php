@@ -257,7 +257,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => '/home',
+    'dashboard_url' => '/',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -309,11 +309,7 @@ return [
             'type' => 'fullscreen-widget',
             'topnav_right' => true,
         ],
-        [
-            'text' => 'Kategori',
-            'url' => 'kategori',
-            'icon' => 'fas fa-list-ul',
-        ],
+        
 
         // Sidebar items:
         [
@@ -324,6 +320,11 @@ return [
             'text' => 'blog',
             'url' => 'admin/blog',
             'can' => 'manage-blog',
+        ],
+        [
+            'text' => 'Kategori',
+            'url' => 'kategori',
+            'icon' => 'fas fa-list-ul',
         ],
         [
             'text' => 'pages',
