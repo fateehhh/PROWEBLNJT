@@ -221,6 +221,13 @@ class UserController extends Controller
         }
         redirect('/');
     }
+    
+    public function show_ajax(string $id)
+    {
+        $user = UserModel::with('level')->find($id);
+
+        return view('user.show_ajax', ['user' => $user]);
+    }
 
     public function edit_ajax($id)
     {
