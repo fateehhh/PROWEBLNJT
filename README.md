@@ -25,8 +25,3 @@ ___
 | 9 | - | [Week 9](./Minggu9/) |
 | 10 | - | [Week 10](./Minggu10/) |
 
-Nama        : M. Fatih Al Ghifary <br>
-NIM         : 2341720194 <br>
-Kelas       : TI-2 <br>
-Mata Kuliah : Pemrograman Web Lanjut <br>
-
