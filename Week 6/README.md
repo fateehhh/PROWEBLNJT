@@ -17,13 +17,13 @@ Link: [Laporan PDF](https://github.com/fateehhh/PROWEBLNJT/blob/main/Week%206/TI
 ## Praktikum 1 - Modal Ajax Tambah Data (Data User)
 Commit: [praktikum 1](https://github.com/fateehhh/PROWEBLNJT/commit/531cac3e2a3cdab72ed76e11b05ddc4232cc1581)
 
-## Praktikum 2 - Integrasi dengan DataTables
-Commit: [praktikum 2](https://github.com/fateehhh/PROWEBLNJT/commit/96940a7c35f3b92ee79933c678d2004ad05f57d6)
+## Praktikum 2 - Modal Ajax Edit Data (Data User)
+Commit: [praktikum 2](https://github.com/fateehhh/PROWEBLNJT/commit/2d3f41ae239dd099ea4cca69178ec7c9376c0e19)
 
-## Praktikum 3 - Membuat form kemudian menyimpan data dalam database 
-Comiit: [praktikum 3](https://github.com/fateehhh/PROWEBLNJT/commit/9c05c54806a3fa1850e429b6ff5e89f4511cf3c5)
+## Praktikum 3 - Modal Ajax Hapus Data (Data User)
+Comiit: [praktikum 3](https://github.com/fateehhh/PROWEBLNJT/commit/bef08229c5e3c0e0d2d288f7950f9793efd60d4f)
 
 ## Tugas Praktikum
-Commit: [praktikum 4](https://github.com/fateehhh/PROWEBLNJT/commit/c788c8a951d647f6b16335241b46ca5897e027cb)
+Commit: [Tugas Praktikum](https://github.com/fateehhh/PROWEBLNJT/commit/ba3289faf9f8072b223037a07f69f698bf5c61e1)
 
 
