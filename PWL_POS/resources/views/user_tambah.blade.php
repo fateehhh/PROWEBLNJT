@@ -1,6 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Tambah Data</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Tambah Data User</title>
 </head>
 <body>
     <h1>Form Tambah Data User</h1>
@@ -17,11 +21,10 @@
         <label>Password</label>
         <input type="password" name="password" placeholder="Masukkan Password">
         <br>
-        <label>Level ID</label>
+        <label>ID Level</label>
         <input type="number" name="level_id" placeholder="Masukkan ID Level">
-        <br>
+        <br><br>
         <input type="submit" class="btn btn-success" value="Simpan">
-
     </form>
 </body>
 </html>

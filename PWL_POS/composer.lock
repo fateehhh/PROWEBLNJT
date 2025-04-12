@@ -4,63 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b8bcf2a4e4bb2caf44ca06b587ef9c0",
+    "content-hash": "86c5ee5ec255857748516b26c7bf9ae5",
     "packages": [
         {
-            "name": "almasaeed2010/adminlte",
-            "version": "v3.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ColorlibHQ/AdminLTE.git",
-                "reference": "bd4d9c72931f1dd28601b6bfb387554a381ad540"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ColorlibHQ/AdminLTE/zipball/bd4d9c72931f1dd28601b6bfb387554a381ad540",
-                "reference": "bd4d9c72931f1dd28601b6bfb387554a381ad540",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Colorlib"
-                }
-            ],
-            "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 4",
-            "homepage": "https://adminlte.io/",
-            "keywords": [
-                "JS",
-                "admin",
-                "back-end",
-                "css",
-                "less",
-                "responsive",
-                "template",
-                "theme",
-                "web"
-            ],
-            "support": {
-                "issues": "https://github.com/ColorlibHQ/AdminLTE/issues",
-                "source": "https://github.com/ColorlibHQ/AdminLTE/tree/v3.2.0"
-            },
-            "time": "2022-02-07T20:33:09+00:00"
-        },
-        {
             "name": "brick/math",
-            "version": "0.12.2",
+            "version": "0.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "901eddb1e45a8e0f689302e40af871c181ecbe40"
+                "reference": "f510c0a40911935b77b86859eb5223d58d660df1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/901eddb1e45a8e0f689302e40af871c181ecbe40",
-                "reference": "901eddb1e45a8e0f689302e40af871c181ecbe40",
+                "url": "https://api.github.com/repos/brick/math/zipball/f510c0a40911935b77b86859eb5223d58d660df1",
+                "reference": "f510c0a40911935b77b86859eb5223d58d660df1",
                 "shasum": ""
             },
             "require": {
@@ -69,7 +26,7 @@
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.2",
                 "phpunit/phpunit": "^10.1",
-                "vimeo/psalm": "6.8.8"
+                "vimeo/psalm": "5.16.0"
             },
             "type": "library",
             "autoload": {
@@ -99,7 +56,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.12.2"
+                "source": "https://github.com/brick/math/tree/0.12.1"
             },
             "funding": [
                 {
@@ -107,7 +64,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-26T10:21:45+00:00"
+            "time": "2023-11-29T23:19:16+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1096,65 +1053,6 @@
                 }
             ],
             "time": "2025-02-03T10:55:03+00:00"
-        },
-        {
-            "name": "jeroennoten/laravel-adminlte",
-            "version": "v3.15.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jeroennoten/Laravel-AdminLTE.git",
-                "reference": "0269331f55fa8385413895225d6d89b85babe3de"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jeroennoten/Laravel-AdminLTE/zipball/0269331f55fa8385413895225d6d89b85babe3de",
-                "reference": "0269331f55fa8385413895225d6d89b85babe3de",
-                "shasum": ""
-            },
-            "require": {
-                "almasaeed2010/adminlte": "3.2.*",
-                "laravel/framework": ">=8.0",
-                "php": ">=7.3"
-            },
-            "require-dev": {
-                "orchestra/testbench": ">=6.0",
-                "phpunit/phpunit": ">=9.1"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "JeroenNoten\\LaravelAdminLte\\AdminLteServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "JeroenNoten\\LaravelAdminLte\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jeroen Noten",
-                    "email": "jeroennoten@me.com"
-                }
-            ],
-            "description": "Easy AdminLTE integration with Laravel",
-            "keywords": [
-                "AdminLTE",
-                "admin",
-                "administrator",
-                "laravel"
-            ],
-            "support": {
-                "issues": "https://github.com/jeroennoten/Laravel-AdminLTE/issues",
-                "source": "https://github.com/jeroennoten/Laravel-AdminLTE/tree/v3.15.0"
-            },
-            "time": "2025-02-24T22:20:15+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3581,16 +3479,16 @@
         },
         {
             "name": "symfony/error-handler",
-            "version": "v6.4.19",
+            "version": "v6.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/error-handler.git",
-                "reference": "3d4e55cd2b8f1979a65eba9ab749d6466c316f71"
+                "reference": "e8d3b5b1975e67812a54388b1ba8e9ec28eb770e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/error-handler/zipball/3d4e55cd2b8f1979a65eba9ab749d6466c316f71",
-                "reference": "3d4e55cd2b8f1979a65eba9ab749d6466c316f71",
+                "url": "https://api.github.com/repos/symfony/error-handler/zipball/e8d3b5b1975e67812a54388b1ba8e9ec28eb770e",
+                "reference": "e8d3b5b1975e67812a54388b1ba8e9ec28eb770e",
                 "shasum": ""
             },
             "require": {
@@ -3636,7 +3534,7 @@
             "description": "Provides tools to manage errors and ease debugging PHP code",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/error-handler/tree/v6.4.19"
+                "source": "https://github.com/symfony/error-handler/tree/v6.4.18"
             },
             "funding": [
                 {
@@ -3652,7 +3550,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-02T20:16:33+00:00"
+            "time": "2025-01-06T09:38:16+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -3953,16 +3851,16 @@
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v6.4.19",
+            "version": "v6.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "88f2c9f7feff86bb7b9105c5151bc2c1404cd64c"
+                "reference": "fca7197bfe9e99dfae7fb1ad3f7f5bd9ef80e1b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/88f2c9f7feff86bb7b9105c5151bc2c1404cd64c",
-                "reference": "88f2c9f7feff86bb7b9105c5151bc2c1404cd64c",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/fca7197bfe9e99dfae7fb1ad3f7f5bd9ef80e1b7",
+                "reference": "fca7197bfe9e99dfae7fb1ad3f7f5bd9ef80e1b7",
                 "shasum": ""
             },
             "require": {
@@ -4047,7 +3945,7 @@
             "description": "Provides a structured process for converting a Request into a Response",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-kernel/tree/v6.4.19"
+                "source": "https://github.com/symfony/http-kernel/tree/v6.4.18"
             },
             "funding": [
                 {
@@ -4063,7 +3961,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-26T10:51:37+00:00"
+            "time": "2025-01-29T07:25:58+00:00"
         },
         {
             "name": "symfony/mailer",
@@ -4147,16 +4045,16 @@
         },
         {
             "name": "symfony/mime",
-            "version": "v6.4.19",
+            "version": "v6.4.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "ac537b6c55ccc2c749f3c979edfa9ec14aaed4f3"
+                "reference": "917d77981eb1ea963608d5cda4d9c0cf72eaa68e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/ac537b6c55ccc2c749f3c979edfa9ec14aaed4f3",
-                "reference": "ac537b6c55ccc2c749f3c979edfa9ec14aaed4f3",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/917d77981eb1ea963608d5cda4d9c0cf72eaa68e",
+                "reference": "917d77981eb1ea963608d5cda4d9c0cf72eaa68e",
                 "shasum": ""
             },
             "require": {
@@ -4212,7 +4110,7 @@
                 "mime-type"
             ],
             "support": {
-                "source": "https://github.com/symfony/mime/tree/v6.4.19"
+                "source": "https://github.com/symfony/mime/tree/v6.4.18"
             },
             "funding": [
                 {
@@ -4228,7 +4126,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-17T21:23:52+00:00"
+            "time": "2025-01-23T13:10:52+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -4868,16 +4766,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v6.4.19",
+            "version": "v6.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "7a1c12e87b08ec9c97abdd188c9b3f5a40e37fc3"
+                "reference": "3cb242f059c14ae08591c5c4087d1fe443564392"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/7a1c12e87b08ec9c97abdd188c9b3f5a40e37fc3",
-                "reference": "7a1c12e87b08ec9c97abdd188c9b3f5a40e37fc3",
+                "url": "https://api.github.com/repos/symfony/process/zipball/3cb242f059c14ae08591c5c4087d1fe443564392",
+                "reference": "3cb242f059c14ae08591c5c4087d1fe443564392",
                 "shasum": ""
             },
             "require": {
@@ -4909,7 +4807,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v6.4.19"
+                "source": "https://github.com/symfony/process/tree/v6.4.15"
             },
             "funding": [
                 {
@@ -4925,7 +4823,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-04T13:35:48+00:00"
+            "time": "2024-11-06T14:19:14+00:00"
         },
         {
             "name": "symfony/routing",
@@ -5181,16 +5079,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v6.4.19",
+            "version": "v6.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "3b9bf9f33997c064885a7bfc126c14b9daa0e00e"
+                "reference": "bee9bfabfa8b4045a66bf82520e492cddbaffa66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/3b9bf9f33997c064885a7bfc126c14b9daa0e00e",
-                "reference": "3b9bf9f33997c064885a7bfc126c14b9daa0e00e",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/bee9bfabfa8b4045a66bf82520e492cddbaffa66",
+                "reference": "bee9bfabfa8b4045a66bf82520e492cddbaffa66",
                 "shasum": ""
             },
             "require": {
@@ -5256,7 +5154,7 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/translation/tree/v6.4.19"
+                "source": "https://github.com/symfony/translation/tree/v6.4.13"
             },
             "funding": [
                 {
@@ -5272,7 +5170,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-13T10:18:43+00:00"
+            "time": "2024-09-27T18:14:25+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -6537,69 +6435,6 @@
                 "source": "https://github.com/laravel/sail"
             },
             "time": "2025-01-24T15:45:36+00:00"
-        },
-        {
-            "name": "laravel/ui",
-            "version": "v4.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/ui.git",
-                "reference": "7d6ffa38d79f19c9b3e70a751a9af845e8f41d88"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/ui/zipball/7d6ffa38d79f19c9b3e70a751a9af845e8f41d88",
-                "reference": "7d6ffa38d79f19c9b3e70a751a9af845e8f41d88",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/console": "^9.21|^10.0|^11.0|^12.0",
-                "illuminate/filesystem": "^9.21|^10.0|^11.0|^12.0",
-                "illuminate/support": "^9.21|^10.0|^11.0|^12.0",
-                "illuminate/validation": "^9.21|^10.0|^11.0|^12.0",
-                "php": "^8.0",
-                "symfony/console": "^6.0|^7.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^7.35|^8.15|^9.0|^10.0",
-                "phpunit/phpunit": "^9.3|^10.4|^11.5"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Laravel\\Ui\\UiServiceProvider"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-master": "4.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Ui\\": "src/",
-                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Laravel UI utilities and presets.",
-            "keywords": [
-                "laravel",
-                "ui"
-            ],
-            "support": {
-                "source": "https://github.com/laravel/ui/tree/v4.6.1"
-            },
-            "time": "2025-01-28T15:15:29+00:00"
         },
         {
             "name": "mockery/mockery",
