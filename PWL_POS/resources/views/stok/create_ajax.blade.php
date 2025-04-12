@@ -1,47 +1,53 @@
-<form action="{{ url('/stok/ajax') }}" method="POST" id="form-tambah-stok">
+<form action="{{ url('/stok/ajax') }}" method="POST" id="form-tambah">
     @csrf
-    <div id="modal-stok" class="modal-dialog modal-md" role="document">
+    <div id="modal-master" class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Tambah Data Stok</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Data Stok</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
+                    {{-- <label>User</label>
+                    <select name="user_id" id="user_id" class="form-control" required>
+                        <option value="">- Pilih User -</option>
+                        @foreach ($user as $s)
+                        <option value="{{ $s->user_id }}">{{ $s->nama }}</option>
+                        @endforeach
+                    </select>
+                    <small id="error-user-id" class="error-text form-text text-danger"></small> --}}
+                    <label>Anda Sebagai :</label>
+                    <select name="user_id" id="user_id" class="form-control" disabled>
+                        <option value="{{ $user->user_id }}" selected>{{ $user->nama }} ({{ $user->level->level_nama }})
+                        </option>
+                    </select>
+                    <small id="error-user-id" class="error-text form-text text-danger"></small>
+
+                    <!-- Ini input hidden agar user_id tetap dikirim ke server -->
+                    <input type="hidden" name="user_id" value="{{ $user->user_id }}">
+
+                </div>
+                <div class="form-group">
                     <label>Barang</label>
                     <select name="barang_id" id="barang_id" class="form-control" required>
                         <option value="">- Pilih Barang -</option>
-                        @foreach ($barang as $item)
-                            <option value="{{ $item->barang_id }}">{{ $item->barang_nama }}</option>
+                        @foreach ($barang as $b)
+                            <option value="{{ $b->barang_id }}">{{ $b->barang_nama }}</option>
                         @endforeach
                     </select>
-                    <small id="error-barang_id" class="error-text form-text text-danger"></small>
+                    <small id="error-barang-id" class="error-text form-text text-danger"></small>
                 </div>
                 <div class="form-group">
-                    <label>User</label>
-                    <div class="col-10">
-                        <select class="form-control" id="user_id" name="user_id" required>
-                            <option value="">- Pilih User -</option>
-                            @foreach($user as $item)
-                                <option value="{{ $item->user_id }}">{{ $item->nama }}</option>
-                            @endforeach
-                        </select>
-                        @error('user_id')
-                            <small class="text-danger">{{ $message }}</small>
-                        @enderror
-                    </div>
+                    <label>Tanggal</label>
+                    <input type="datetime-local" name="stok_tanggal" id="stok_tanggal" class="form-control" required>
+                    <small id="error-stok-tanggal" class="error-text form-text text-danger"></small>
                 </div>
                 <div class="form-group">
-                    <label>Tanggal Stok</label>
-                    <input type="date" name="stok_tanggal" id="stok_tanggal" class="form-control" required>
-                    <small id="error-stok_tanggal" class="error-text form-text text-danger"></small>
-                </div>
-                <div class="form-group">
-                    <label>Jumlah Stok</label>
-                    <input type="number" name="stok_jumlah" id="stok_jumlah" class="form-control" required>
-                    <small id="error-stok_jumlah" class="error-text form-text text-danger"></small>
+                    <label>Jumlah</label>
+                    <input value="" type="number" name="stok_jumlah" id="stok_jumlah" class="form-control" required>
+                    <small id="error-stok-jumlah" class="error-text form-text text-danger"></small>
                 </div>
             </div>
             <div class="modal-footer">
@@ -53,11 +59,12 @@
 </form>
 <script>
     $(document).ready(function () {
-        $("#form-tambah-stok").validate({
+        $("#form-tambah").validate({
             rules: {
+                user_id: { required: true },
                 barang_id: { required: true },
                 stok_tanggal: { required: true },
-                stok_jumlah: { required: true, min: 1 },
+                stok_jumlah: { required: true }
             },
             submitHandler: function (form) {
                 $.ajax({
@@ -66,13 +73,13 @@
                     data: $(form).serialize(),
                     success: function (response) {
                         if (response.status) {
-                            $('#modal-stok').modal('hide');
+                            $('#myModal').modal('hide');
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Berhasil',
                                 text: response.message
                             });
-                            dataStok.ajax.reload(); // pastikan dataStok = DataTable stok
+                            dataStok.ajax.reload();
                         } else {
                             $('.error-text').text('');
                             $.each(response.msgField, function (prefix, val) {
@@ -93,10 +100,10 @@
                 error.addClass('invalid-feedback');
                 element.closest('.form-group').append(error);
             },
-            highlight: function (element) {
+            highlight: function (element, errorClass, validClass) {
                 $(element).addClass('is-invalid');
             },
-            unhighlight: function (element) {
+            unhighlight: function (element, errorClass, validClass) {
                 $(element).removeClass('is-invalid');
             }
         });
