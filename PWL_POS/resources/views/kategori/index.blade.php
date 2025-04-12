@@ -4,9 +4,8 @@
         <div class="card-header">
             <h3 class="card-title">{{ $page->title }}</h3>
             <div class="card-tools">
-                <a class="btn btn-sm btn-primary mt-1" href="{{ url('kategori/create') }}">Tambah</a>
                 <button onclick="modalAction('{{ url('kategori/create_ajax') }}')" class="btn btn-sm btn-success mt-1">
-                    Tambah Ajax
+                    <i class="fas fa-plus" style="margin-right: 5px;"></i>Tambah Kategori
                 </button>
             </div>
         </div>
