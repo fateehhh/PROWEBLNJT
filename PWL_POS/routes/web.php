@@ -9,6 +9,7 @@ use App\Http\Controllers\BarangController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StokController;
+use App\Http\Controllers\PenjualanController;
 
 
 /*
@@ -176,6 +177,26 @@ Route::middleware(['auth'])->group(function () { //artinya semua route di dalam 
         Route::delete('/stok/{id}/delete_ajax', [StokController::class, 'delete_ajax']);
         Route::delete('/stok/{id}', [StokController::class, 'destroy']);
     });
+
+    // Penjualan
+    Route::middleware(['authorize:ADM,MNG,STF'])->group(function () {
+        Route::get('/penjualan', [PenjualanController::class, 'index']);
+        Route::post('/penjualan/list', [PenjualanController::class, 'list']);
+        Route::get('/penjualan/create', [PenjualanController::class, 'create']);
+        Route::post('/penjualan', [PenjualanController::class, 'store']);
+        Route::get('/penjualan/create_ajax', [PenjualanController::class, 'create_ajax']);
+        Route::post('/penjualan/ajax', [PenjualanController::class, 'store_ajax']);
+        Route::get('/penjualan/{id}', [PenjualanController::class, 'show']);
+        Route::get('/penjualan/{id}/edit', [PenjualanController::class, 'edit']);
+        Route::put('/penjualan/{id}', [PenjualanController::class, 'update']);
+        Route::get('/penjualan/{id}/show_ajax', [PenjualanController::class, 'show_ajax']);
+        Route::get('/penjualan/{id}/edit_ajax', [PenjualanController::class, 'edit_ajax']);
+        Route::put('/penjualan/{id}/update_ajax', [PenjualanController::class, 'update_ajax']);
+        Route::get('/penjualan/{id}/delete_ajax', [PenjualanController::class, 'confirm_ajax']);
+        Route::delete('/penjualan/{id}/delete_ajax', [PenjualanController::class, 'delete_ajax']);
+        Route::delete('/penjualan/{id}', [PenjualanController::class, 'destroy']);
+    });
+
 });
 
 // User
