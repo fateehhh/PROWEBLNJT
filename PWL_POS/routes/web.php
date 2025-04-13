@@ -72,6 +72,8 @@ Route::middleware(['auth'])->group(function () { //artinya semua route di dalam 
         Route::get('/user/{id}/delete_ajax', [UserController::class, 'confirm_ajax']);
         Route::delete('/user/{id}/delete_ajax', [UserController::class, 'delete_ajax']);
         Route::delete('/user/{id}', [UserController::class, 'destroy']);
+        Route::get('/user/export_pdf', [UserController::class, 'export_pdf']);
+        Route::get('/user/export_excel', [UserController::class, 'export_excel']);
     });
 
     //level
@@ -195,6 +197,8 @@ Route::middleware(['auth'])->group(function () { //artinya semua route di dalam 
         Route::get('/penjualan/{id}/delete_ajax', [PenjualanController::class, 'confirm_ajax']);
         Route::delete('/penjualan/{id}/delete_ajax', [PenjualanController::class, 'delete_ajax']);
         Route::delete('/penjualan/{id}', [PenjualanController::class, 'destroy']);
+        Route::get('/penjualan/export_pdf', [PenjualanController::class, 'export_pdf']);
+        Route::get('/penjualan/export_excel', [PenjualanController::class, 'export_excel']);
     });
 
 });

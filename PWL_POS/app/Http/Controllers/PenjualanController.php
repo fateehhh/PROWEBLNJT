@@ -11,6 +11,9 @@ use App\Models\StokModel;
 use Illuminate\Support\Facades\Validator;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Auth;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Barryvdh\DomPDF\Facade\Pdf;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class PenjualanController extends Controller
 {
@@ -257,5 +260,86 @@ class PenjualanController extends Controller
     {
         $penjualan = PenjualanModel::find($id);
         return view('penjualan.confirm_ajax', compact('penjualan'));
+    }
+
+    public function export_excel()
+    {
+        // 1. Ambil data penjualan
+        $penjualan = PenjualanModel::with(['detail.barang', 'user'])->orderBy('penjualan_tanggal')->get();
+
+        // 2. Buat spreadsheet baru
+        $spreadsheet = new Spreadsheet();
+        $sheet = $spreadsheet->getActiveSheet();
+
+        // 3. Header
+        $sheet->setCellValue('A1', 'No');
+        $sheet->setCellValue('B1', 'Kode Penjualan');
+        $sheet->setCellValue('C1', 'Tanggal');
+        $sheet->setCellValue('D1', 'Nama Petugas');
+        $sheet->setCellValue('E1', 'Pembeli');
+        $sheet->setCellValue('F1', 'Jumlah Barang');
+        $sheet->setCellValue('G1', 'Total Harga');
+
+        $sheet->getStyle('A1:G1')->getFont()->setBold(true);
+
+        // 4. Isi data
+        $no = 1;
+        $baris = 2;
+        foreach ($penjualan as $item) {
+            $totalJumlah = $item->detail->sum('jumlah');
+            $totalHarga = $item->detail->sum(function ($d) {
+                return $d->jumlah * $d->harga;
+            });
+
+            $sheet->setCellValue('A' . $baris, $no++);
+            $sheet->setCellValue('B' . $baris, $item->penjualan_kode);
+            $sheet->setCellValue('C' . $baris, $item->penjualan_tanggal);
+            $sheet->setCellValue('D' . $baris, $item->user->nama ?? '-');
+            $sheet->setCellValue('E' . $baris, $item->pembeli);
+            $sheet->setCellValue('F' . $baris, $totalJumlah);
+            $sheet->setCellValue('G' . $baris, $totalHarga);
+
+            $baris++;
+        }
+
+        // 5. Auto size
+        foreach (range('A', 'G') as $col) {
+            $sheet->getColumnDimension($col)->setAutoSize(true);
+        }
+
+        // 6. Export
+        $sheet->setTitle('Data Penjualan');
+        $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
+        $filename = 'Data Penjualan ' . date('Y-m-d H-i-s') . '.xlsx';
+
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header("Content-Disposition: attachment; filename=\"$filename\"");
+        header('Cache-Control: max-age=0');
+        header('Expires: 0');
+        header('Pragma: public');
+
+        $writer->save('php://output');
+        exit;
+    }
+
+    public function export_pdf()
+    {
+        $penjualan = PenjualanModel::with(['user', 'detail'])
+            ->orderBy('penjualan_kode', 'asc')  // Mengurutkan berdasarkan kode penjualan
+            ->get()
+            ->map(function ($item) {
+                $item->jumlah = $item->detail->sum('jumlah');
+                $item->total = $item->detail->sum(function ($d) {
+                    return $d->harga * $d->jumlah;
+                });
+                return $item;
+            });
+
+        $pdf = PDF::loadView('penjualan.export_pdf', ['penjualan' => $penjualan]);
+        $pdf->setPaper('A4', 'potrait');
+        $pdf->setOption("isRemoteEnabled", true);
+        $pdf->render();
+
+        return $pdf->stream('Laporan Penjualan ' . date('Y-m-d H:i:s') . '.pdf');
     }
 }

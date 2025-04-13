@@ -9,7 +9,7 @@
                 <a href="{{ url('/barang/export_excel') }}" class="btn btn-sm btn-primary"><i class="fa fa-file-excel"></i>
                     Export
                     Barang</a>
-                <a href="{{ url('/barang/export_pdf') }}" class="btn btn-sm btn-warning"><i class="fa fa-file-pdf"></i>
+                <a href="{{ url('/barang/export_pdf') }}" class="btn btn-sm btn-danger"><i class="fa fa-file-pdf"></i>
                     Export
                     Barang</a>
                 <button onclick="modalAction('{{ url('barang/create_ajax') }}')" class="btn btn-sm btn-success">
@@ -30,7 +30,7 @@
                                     <option value="{{ $item->kategori_id }}">{{ $item->kategori_nama }}</option>
                                 @endforeach
                             </select>
-                            <small class="form-text text-muted">Kategori Barang</small>
+                            <small class="form-text text-muted">Filter Berdasarkan Kategori Barang</small>
                         </div>
                     </div>
                 </div>

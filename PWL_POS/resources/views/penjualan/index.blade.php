@@ -5,6 +5,12 @@
         <div class="card-header">
             <h3 class="card-title">{{ $page->title }}</h3>
             <div class="card-tools">
+                <a href="{{ url('/penjualan/export_excel') }}" class="btn btn-sm btn-primary">
+                    <i class="fas fa-file-excel"></i> Export Excel
+                </a>
+                <a href="{{ url('/penjualan/export_pdf') }}" class="btn btn-sm btn-danger">
+                    <i class="fas fa-file-pdf"></i> Export PDF
+                </a>
                 <button onclick="modalAction('{{ url('penjualan/create_ajax') }}')" class="btn btn-sm btn-success">
                     <i class="fas fa-plus mr-1"></i>Tambah Penjualan
                 </button>
