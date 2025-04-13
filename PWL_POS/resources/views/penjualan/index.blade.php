@@ -12,25 +12,22 @@
         </div>
         <div class="card-body">
             {{-- Filter --}}
-            <div id="filter" class="form-horizontal filter-date p-2 border-bottom mb-2">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group row">
-                            <label class="col-1 control-label col-form-label">Filter Penjualan:</label>
-                            <div class="col-3">
-                                <select class="form-control" id="level_nama" name="level_nama">
-                                    <option value="">- Semua -</option>
-                                    @foreach ($level as $item)
-                                        <option value="{{ $item->level_nama }}">{{ $item->level_nama }}</option>
-                                    @endforeach
-                                </select>
-                                <small class="form-text text-muted">Filter Berdasarkan Level User</small>
-                            </div>
+            <div class="row mx-2 mt-2">
+                <div class="col-md-12">
+                    <div class="form-group row">
+                        <label class="col-1 control-label col-form-label">Filter Penjualan:</label>
+                        <div class="col-3">
+                            <select class="form-control" id="level_nama" name="level_nama">
+                                <option value="">- Semua -</option>
+                                @foreach ($level as $item)
+                                    <option value="{{ $item->level_nama }}">{{ $item->level_nama }}</option>
+                                @endforeach
+                            </select>
+                            <small class="form-text text-muted">Filter Berdasarkan Level User</small>
                         </div>
                     </div>
                 </div>
             </div>
-
             {{-- Flash Message --}}
             @if (session('success'))
                 <div class="alert alert-success">{{ session('success') }}</div>

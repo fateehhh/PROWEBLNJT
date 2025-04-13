@@ -6,9 +6,11 @@
             <div class="card-tools">
                 <button onclick="modalAction('{{ url('/barang/import') }}')" class="btn btn-sm btn-info">Import
                     Barang</button>
-                <a href="{{ url('/barang/export_excel') }}" class="btn btn-sm btn-primary"><i class="fa fa-file-excel"></i> Export
+                <a href="{{ url('/barang/export_excel') }}" class="btn btn-sm btn-primary"><i class="fa fa-file-excel"></i>
+                    Export
                     Barang</a>
-                <a href="{{ url('/barang/export_pdf') }}" class="btn btn-sm btn-warning"><i class="fa fa-file-pdf"></i> Export
+                <a href="{{ url('/barang/export_pdf') }}" class="btn btn-sm btn-warning"><i class="fa fa-file-pdf"></i>
+                    Export
                     Barang</a>
                 <button onclick="modalAction('{{ url('barang/create_ajax') }}')" class="btn btn-sm btn-success">
                     <i class="fas fa-plus" style="margin-right: 5px;"></i>Tambah Barang
@@ -17,20 +19,18 @@
         </div>
         <div class="card-body">
             <!-- untuk Filter data -->
-            <div id="filter" class="form-horizontal filter-date p-2 border-bottom mb-2">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group row">
-                            <label class="col-1 control-label col-form-label">Filter:</label>
-                            <div class="col-3">
-                                <select class="form-control" id="kategori_id" name="kategori_id" required>
-                                    <option value="">- Semua -</option>
-                                    @foreach ($kategori as $item)
-                                        <option value="{{ $item->kategori_id }}">{{ $item->kategori_nama }}</option>
-                                    @endforeach
-                                </select>
-                                <small class="form-text text-muted">Kategori Barang</small>
-                            </div>
+            <div class="row mx-3 mt-2">
+                <div class="col-md-12">
+                    <div class="form-group row">
+                        <label class="col-1 control-label col-form-label">Filter Barang:</label>
+                        <div class="col-3">
+                            <select class="form-control" id="kategori_id" name="kategori_id" required>
+                                <option value="">- Semua -</option>
+                                @foreach ($kategori as $item)
+                                    <option value="{{ $item->kategori_id }}">{{ $item->kategori_nama }}</option>
+                                @endforeach
+                            </select>
+                            <small class="form-text text-muted">Kategori Barang</small>
                         </div>
                     </div>
                 </div>
@@ -94,8 +94,8 @@
                 }, {
                     data: "barang_nama",
                     className: "",
-                    orderable: false,
-                    searchable: false
+                    orderable: true,
+                    searchable: true
                 }, {
                     data: "harga_beli",
                     className: "text-left",

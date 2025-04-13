@@ -27,7 +27,7 @@
                                     <option value="{{ $item->supplier_kode }}">{{ $item->supplier_kode }}</option>
                                 @endforeach
                             </select>
-                            <small class="form-text text-muted">Kode Supplier</small>
+                            <small class="form-text text-muted">Filter Berdasarkan Kode Supplier</small>
                         </div>
                     </div>
                 </div>

@@ -19,7 +19,7 @@
             <div class="row mx-3 mt-2">
                 <div class="col-md-12">
                     <div class="form-group row">
-                        <label class="col-1 control-label col-form-label">Filter:</label>
+                        <label class="col-1 control-label col-form-label">Filter Kategori:</label>
                         <div class="col-3">
                             <select class="form-control" id="kategori_kode" name="kategori_kode">
                                 <option value="">- Semua -</option>
@@ -27,7 +27,7 @@
                                     <option value="{{ $item->kategori_kode }}">{{ $item->kategori_kode }}</option>
                                 @endforeach
                             </select>
-                            <small class="form-text text-muted">Kode Kategori</small>
+                            <small class="form-text text-muted">Filter Berdasarkan Kode Kategori</small>
                         </div>
                     </div>
                 </div>

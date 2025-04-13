@@ -27,7 +27,7 @@
                                     <option value="{{ $item->level_kode }}">{{ $item->level_kode }}</option>
                                 @endforeach
                             </select>
-                            <small class="form-text text-muted">Kode Level</small>
+                            <small class="form-text text-muted">Filter Berdasarkan Kode Level</small>
                         </div>
                     </div>
                 </div>
