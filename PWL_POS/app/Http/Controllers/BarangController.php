@@ -160,9 +160,22 @@ class BarangController extends Controller
     {
         $kategori = KategoriModel::select('kategori_id', 'kategori_nama')->get();
 
-        return view('barang.create_ajax')
-            ->with('kategori', $kategori);
+        $lastBarang = BarangModel::orderBy('barang_id', 'desc')->first();
+        if ($lastBarang && isset($lastBarang->barang_kode)) {
+            $lastNumber = (int) substr($lastBarang->barang_kode, 3); // Ambil angka setelah 'BRG'
+            $newNumber = $lastNumber + 1;
+        } else {
+            $newNumber = 1;
+        }
+
+        $newKode = 'BRG' . str_pad($newNumber, 3, '0', STR_PAD_LEFT);
+
+        return view('barang.create_ajax', [
+            'kategori' => $kategori,
+            'kodeBarang' => $newKode
+        ]);
     }
+
 
     public function store_ajax(Request $request)
     {
@@ -418,7 +431,7 @@ class BarangController extends Controller
         $pdf->setOption("isRemoteEnabled", true);
         $pdf->render();
 
-        return $pdf->stream('Data Barang ' . date('Y-m-d H:i:s') . '.pdf',);
+        return $pdf->stream('Data Barang ' . date('Y-m-d H:i:s') . '.pdf', );
     }
 }
 

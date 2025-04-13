@@ -21,7 +21,8 @@
                 </div>
                 <div class="form-group">
                     <label>Kode Barang</label>
-                    <input value="" type="text" name="barang_kode" id="barang_kode" class="form-control" required>
+                    <input value="{{ $kodeBarang }}" type="text" name="barang_kode" id="barang_kode"
+                        class="form-control" required>
                     <small id="error-barang-kode" class="error-text form-text text-danger"></small>
                 </div>
                 <div class="form-group">
@@ -51,7 +52,7 @@
     $(document).ready(function () {
         $("#form-tambah").validate({
             rules: {
-                barang_kode: { required: true, minlength: 7, maxlength: 10 },
+                barang_kode: { required: true, minlength: 5, maxlength: 10 },
                 barang_nama: { required: true, maxlength: 100 },
                 harga_beli: { required: true },
                 harga_jual: { required: true },
