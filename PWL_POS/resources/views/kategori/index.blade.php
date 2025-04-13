@@ -38,6 +38,7 @@
                         <th>ID</th>
                         <th>Kode Kategori</th>
                         <th>Nama Kategori</th>
+                        <th>Supplier</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -80,6 +81,11 @@
                     searchable: true
                 }, {
                     data: "kategori_nama",
+                    className: "",
+                    orderable: true,
+                    searchable: true
+                }, {
+                    data: "supplier_nama",
                     className: "",
                     orderable: true,
                     searchable: true

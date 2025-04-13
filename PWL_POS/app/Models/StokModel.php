@@ -18,6 +18,7 @@ class StokModel extends Model
     protected $fillable = [
         'barang_id',
         'user_id',
+        'supplier_id',
         'stok_tanggal',
         'stok_jumlah',
     ];
@@ -31,4 +32,9 @@ class StokModel extends Model
     {
         return $this->belongsTo(UserModel::class, 'user_id', 'user_id');
     }
+    public function supplier()
+    {
+        return $this->belongsTo(SupplierModel::class, 'supplier_id', 'supplier_id');
+    }
+
 }

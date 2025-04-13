@@ -35,12 +35,18 @@
                     </div>
                     <table class="table table-sm table-bordered table-striped">
                         <tr>
-                            <th class="text-right col-3">Supplier Kode:</th>
+                            <th class="text-right col-3">Kategori Kode:</th>
                             <td class="col-9">{{ $kategori->kategori_kode }}</td>
                         </tr>
                         <tr>
-                            <th class="text-right col-3">Supplier Nama:</th>
+                            <th class="text-right col-3">Kategori Nama:</th>
                             <td class="col-9">{{ $kategori->kategori_nama }}</td>
+                        </tr>
+                        <tr>
+                            <th class="text-right col-3">Supplier:</th>
+                            <td class="col-9">
+                                {{ $kategori->supplier ? $kategori->supplier->supplier_nama : 'Tidak Ada Supplier' }}
+                            </td>
                         </tr>
                     </table>
                 </div>

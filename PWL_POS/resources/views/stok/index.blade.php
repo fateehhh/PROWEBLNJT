@@ -41,6 +41,7 @@
                     <tr>
                         <th>No</th>
                         <th>Nama Barang</th>
+                        <th>Supplier</th>
                         <th>Nama User</th>
                         <th>Tanggal</th>
                         <th>Jumlah</th>
@@ -77,42 +78,49 @@
                         d.user_id = $('#user_id').val();
                     }
                 },
-                columns: [{
-                    data: "DT_RowIndex",
-                    className: "text-center",
-                    orderable: false,
-                    searchable: false
-                },
-                {
-                    data: "barang.barang_nama",
-                    className: "",
-                    orderable: true,
-                    searchable: true
-                },
-                {
-                    data: "user.nama",
-                    className: "",
-                    orderable: true,
-                    searchable: true
-                },
-                {
-                    data: "stok_tanggal",
-                    className: "",
-                    orderable: true,
-                    searchable: true
-                },
-                {
-                    data: "stok_jumlah",
-                    className: "",
-                    orderable: true,
-                    searchable: true
-                },
-                {
-                    data: "aksi",
-                    className: "",
-                    orderable: false,
-                    searchable: false
-                }
+                columns: [
+                    {
+                        data: "DT_RowIndex",
+                        className: "text-center",
+                        orderable: false,
+                        searchable: false
+                    },
+                    {
+                        data: "barang.barang_nama",
+                        className: "",
+                        orderable: true,
+                        searchable: true
+                    },
+                    {
+                        data: "supplier_nama", // Gunakan "supplier_kode" yang baru ditambahkan di controller
+                        className: "",
+                        orderable: true,
+                        searchable: true
+                    },
+                    {
+                        data: "user.nama",
+                        className: "",
+                        orderable: true,
+                        searchable: true
+                    },
+                    {
+                        data: "stok_tanggal",
+                        className: "",
+                        orderable: true,
+                        searchable: true
+                    },
+                    {
+                        data: "stok_jumlah",
+                        className: "",
+                        orderable: true,
+                        searchable: true
+                    },
+                    {
+                        data: "aksi",
+                        className: "",
+                        orderable: false,
+                        searchable: false
+                    }
                 ]
             });
 

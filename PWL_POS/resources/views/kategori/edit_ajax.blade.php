@@ -41,6 +41,20 @@
                             class="form-control" required>
                         <small id="error-kategori-nama" class="error-text form-text text-danger"></small>
                     </div>
+
+                    <!-- Tambahkan Dropdown Supplier -->
+                    <div class="form-group">
+                        <label>Supplier</label>
+                        <select name="supplier_id" id="supplier_id" class="form-control" required>
+                            <option value="">Pilih Supplier</option>
+                            @foreach($suppliers as $supplier)
+                                <option value="{{ $supplier->supplier_id }}" {{ $supplier->supplier_id == $kategori->supplier_id ? 'selected' : '' }}>
+                                    {{ $supplier->supplier_nama }}
+                                </option>
+                            @endforeach
+                        </select>
+                        <small id="error-supplier-id" class="error-text form-text text-danger"></small>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" data-dismiss="modal" class="btn btn-warning">Batal</button>
@@ -55,6 +69,7 @@
                 rules: {
                     kategori_kode: { required: true, minlength: 3, maxlength: 10 },
                     kategori_nama: { required: true, maxlength: 100 },
+                    supplier_id: { required: true }
                 },
                 submitHandler: function (form) {
                     $.ajax({

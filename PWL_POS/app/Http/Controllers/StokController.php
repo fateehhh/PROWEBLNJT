@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\BarangModel;
 use App\Models\StokModel;
 use App\Models\UserModel;
+use App\Models\SupplierModel;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -32,10 +33,20 @@ class StokController extends Controller
 
     public function list(Request $request)
     {
-        $stoks = StokModel::select('stok_id', 'barang_id', 'user_id', 'stok_tanggal', 'stok_jumlah')
-            ->with('barang')
-            ->with('user');
+        $stoks = StokModel::with(['barang', 'user', 'supplier'])
+            ->select(
+                't_stok.stok_id',
+                't_stok.barang_id',
+                't_stok.user_id',
+                't_stok.supplier_id',
+                't_stok.stok_tanggal',
+                't_stok.stok_jumlah'
+            );
 
+        // Filter berdasarkan parameter
+        if ($request->supplier_id) {
+            $stoks->where('t_stok.supplier_id', $request->supplier_id);
+        }
         if ($request->barang_id) {
             $stoks->where('barang_id', $request->barang_id);
         }
@@ -45,6 +56,10 @@ class StokController extends Controller
 
         return DataTables::of($stoks)
             ->addIndexColumn()
+            ->addColumn('supplier_nama', function ($stok) {
+                $supplier = $stok->barang->kategori->supplier ?? null;
+                return $supplier ? $supplier->supplier_nama : '-';
+            })
             ->addColumn('aksi', function ($stok) {
                 $btn = '<button onclick="modalAction(\'' . url('/stok/' . $stok->stok_id . '/show_ajax') . '\')" class="btn btn-info btn-sm">Detail</button> ';
                 $btn .= '<button onclick="modalAction(\'' . url('/stok/' . $stok->stok_id . '/edit_ajax') . '\')" class="btn btn-warning btn-sm">Edit</button> ';
@@ -57,9 +72,17 @@ class StokController extends Controller
 
     public function create_ajax()
     {
-        // $barang = BarangModel::select('barang_id', 'barang_nama')->get();
         $barangSudahDipakai = StokModel::pluck('barang_id')->toArray(); // barang_id yang sudah ada di stok
-        $barang = BarangModel::whereNotIn('barang_id', $barangSudahDipakai)->get();
+        $barang = BarangModel::whereNotIn('barang_id', $barangSudahDipakai)
+            ->with(['kategori.supplier'])
+            ->get()
+            ->map(function ($b) {
+                return [
+                    'barang_id' => $b->barang_id,
+                    'barang_nama' => $b->barang_nama,
+                    'supplier_nama' => optional($b->kategori->supplier)->supplier_nama,
+                ];
+            });
         $user = Auth::user(); // ambil user yang login
 
         return view('stok.create_ajax')
