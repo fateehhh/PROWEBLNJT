@@ -1,14 +1,23 @@
-# Pemrograman Web Lanjut – Semester 4  
+<table style="width: 100%; border: none;">
+    <tr>
+        <td valign="center" align="left" width="20%">
+            <img src="logo-web.png" alt="Logo Poltek">
+        </td>
+        <td>
+            <h1>Pemrograman Web Lanjut – Semester 4</h1>
+            <p>Repository ini berisi kumpulan tugas untuk mata kuliah <strong>Pemrograman Web Lanjut</strong> pada semester 4. Setiap tugas dikelompokkan berdasarkan minggu pengerjaannya.</p>
+        </td>
+    </tr>
+</table>
 
-Repository ini berisi kumpulan tugas untuk mata kuliah **Pemrograman Web Lanjut** pada semester 4.  
-Setiap tugas dikelompokkan berdasarkan minggu pengerjaannya untuk memudahkan navigasi dan referensi.  
-___
 # Data Diri
-Nama        : M. Fatih Al Ghifary <br>
-NIM         : 2341720194 <br>
-Kelas       : TI-2 <br>
-Mata Kuliah : Pemrograman Web Lanjut <br>
+- **Nama**        : M. Fatih Al Ghifary  
+- **NIM**         : 2341720194  
+- **Kelas**       : TI-2  
+- **Mata Kuliah** : Pemrograman Web Lanjut  
+
 ___
+
 ## Daftar Tugas
 
 | Week | Courseware | Link |
@@ -22,6 +31,7 @@ ___
 | 6 | Ajax Form (AdminLTE) dan Client Validation | [Week 6](https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%206) |
 | 7 | Authentication dan Authorization | [Week 7](https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%207) |
 | 8 | File Import dan Export | [Week 8](https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%208) |
-| 9 | - | [Week 9](./Minggu9/) |
-| 10 | - | [Week 10](./Minggu10/) |
+| 9 | UTS | [Week 9](https://github.com/fateehhh/PROWEBLNJT/tree/main/PWL_POS) |
+| 10 | RESTFUL API 1 | [Week 10](https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%2010) |
+| 11 | RESTFUL API 2 | [Week 11](https://github.com/fateehhh/PROWEBLNJT/tree/main/Week%2011) |
 
